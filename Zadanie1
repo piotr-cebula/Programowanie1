@@ -1,0 +1,15 @@
+koszt_dostawy = 12
+cena_produktu = float(input("Podaj cenę produktu"))
+liczba_sztuk = float(input("Podaj liczbę sztuk produktu"))
+
+wartosc_produktow = liczba_sztuk * cena_produktu
+
+if wartosc_produktow >= 100:
+ koszt_dostawy = 0
+
+Zaplata  = koszt_dostawy + wartosc_produktow
+
+print()
+print(f"Wartosc produktow: {wartosc_produktow} zl ")
+print(f"Koszt dostawy : {koszt_dostawy} zl")
+print(f"Do zaplacenia {Zaplata} zl")
