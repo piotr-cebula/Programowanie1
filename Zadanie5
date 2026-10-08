@@ -1,0 +1,12 @@
+Godzina = int(input("Podaj Czas postoju"))
+if Godzina <= 0:
+    print(f"Błąd")
+if Godzina ==  1 :
+ print(f" 5 zł")
+if Godzina > 1 and Godzina <= 3:
+   print(f"12 zł")
+if Godzina > 3 and Godzina <= 6:
+   print(f"20 zł")
+if Godzina > 6 :
+   print(f" 30 zł")
+   print(f"Czas: {Godzina}")
