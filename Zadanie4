@@ -1,0 +1,9 @@
+wiek = int(input("Podaj wiek: "))
+
+zgoda = input("Czy masz zgodę opiekuna? (tak/nie): ")
+dokument = input("Czy masz dokument tożsamości? (tak/nie): ")
+
+if dokument == "tak" and (wiek >= 18 or (wiek >= 13 and zgoda == "tak")):
+    print("\nWypożyczenie możliwe")
+else:
+    print("\nWypożyczenie niemożliwe")
