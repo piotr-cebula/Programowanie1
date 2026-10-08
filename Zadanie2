@@ -1,0 +1,14 @@
+punkty = float(input("Podaj liczbę punktow"))
+if punkty <= 49:
+ print("Ocena 2")
+if punkty >= 50 and punkty <= 59:
+ print("Ocena 3")
+ if punkty >= 60 and punkty <= 69:
+  print("Ocena 3,5")
+if punkty >= 70 and punkty <= 79:
+  print("Ocena 4")
+if punkty >= 80 and punkty <= 89:
+  print("Ocena 4,5")
+if punkty >= 90 and punkty <= 100:
+ print("Ocena 5")
+ print()
