@@ -1,0 +1,10 @@
+cena = float(input("Podaj cene"))
+rabat = float(input("Podaj rabat"))
+kwota_rabatu = (cena * rabat) / 100
+Cena_po_rabacie =  cena - kwota_rabatu
+
+print(f"Cena Poczatkowa {cena}")
+print(f"Kwota Rabatu {kwota_rabatu} zl ")
+print(f"Cena po rabacie {Cena_po_rabacie}")
+if rabat >= 20:
+ print(f"Duża promocja")
