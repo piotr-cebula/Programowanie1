@@ -1,0 +1,9 @@
+wysokosc = int(input("Podaj wysokosc choinki: "))
+
+i = 0  # Zaczynamy od poziomu zerowego
+
+while i < wysokosc:
+    spacje = " " * (wysokosc - i - 1)
+    gwiazdki = "*" * (2 * i + 1)
+    print(spacje + gwiazdki)
+    i = i + 1  # Przechodzimy do kolejnego poziomu
