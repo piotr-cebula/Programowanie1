@@ -1,0 +1,16 @@
+temperatura = float(input("Podaj temperature: "))
+dom = input("Czy ktos jest w domu? ")
+okno = input("Czy okno jest otwarte? ")
+
+if okno == "tak":
+    print("Ogrzewanie: wylaczone")
+    print("Powod: Okno jest otwarte.")
+elif dom == "tak" and temperatura < 20:
+    print("Ogrzewanie: wlaczone")
+    print("Powod: Temperatura ponizej 20 C.")
+elif dom == "nie" and temperatura < 16:
+    print("Ogrzewanie: w;aczpme")
+    print("Powod: Temperatura ponizej 16 C (nikogo nie ma w domu).")
+else:
+    print("Ogrzewanie: wylaczone")
+    print("Powod: Odpowiednia temperatura (nie wymaga ogrzewania).")
