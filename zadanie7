@@ -1,0 +1,10 @@
+kwota = int(input("Ile odkladasz tygodniowo? "))
+tygodnie = int(input("Przez ile tygodni? "))
+
+oszczednosci = 0
+
+for i in range(1, tygodnie + 1):
+    oszczednosci = oszczednosci + kwota
+    print(f"Tydzien {i}: {oszczednosci} zl")
+
+print(f"Laczne oszczednosci: {oszczednosci} zl")
