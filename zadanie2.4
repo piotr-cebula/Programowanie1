@@ -1,21 +1,8 @@
-napoje = ["Woda", "Sok", "Cola"]
-ceny = [3, 5, 6]
-suma = 0
+wiek = int(input("Podaj wiek: "))
+zgoda = input("Czy masz zgode opiekuna? ")
+dokument = input("Czy masz dokument tozsamosci? ")
 
-while True:
-    print("1. Woda - 3 zl")
-    print("2. Sok - 5 zl")
-    print("3. Cola - 6 zl")
-    print("0. Zakoncz")
-    
-    opcja = int(input("Wybierz opcje: "))
-    
-    if opcja == 0:
-        break
-    elif 1 <= opcja <= 3:
-        suma += ceny[opcja-1]
-        print(f"Wybrano: {napoje[opcja-1]}, cena: {ceny[opcja-1]} zl")
-    else:
-        print("Nieprawidlowa opcja.")
-
-print(f"Lacznie do zaplaty: {suma} zl")
+if dokument == 'tak' and (wiek >= 18 or (wiek >= 13 and zgoda == 'tak')):
+    print("Wypozyczenie mozliwe")
+else:
+    print("Wypozyczenie niemozliwe")
