@@ -2,7 +2,7 @@ poczatek = int(input("Podaj poczatek zakresu: "))
 koniec = int(input("Podaj koniec zakresu: "))
 
 liczba_parzystych = 0
-liczba = poczatek  # Zaczynamy sprawdzanie od liczby początkowej
+liczba = poczatek  
 
 while liczba <= koniec:
     if liczba % 2 == 0:
@@ -11,6 +11,6 @@ while liczba <= koniec:
     else:
         print(f"{liczba}- Nieparzysta")
         
-    liczba = liczba + 1  # Bierzemy kolejną liczbę do sprawdzenia
+    liczba = liczba + 1  
 
 print(f"Liczba liczb parzystych: {liczba_parzystych}")
