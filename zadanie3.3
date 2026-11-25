@@ -1,0 +1,76 @@
+biblioteka = []
+
+while True:
+    print("\n========== BIBLIOTEKA ==========")
+    print("1. Dodaj ksiazke")
+    print("2. Wyswietl wszystkie ksiazki")
+    print("3. Wypozycz ksiazke")
+    print("4. Zwroc ksiazke")
+    print("5. Usun ksiazke")
+    print("0. Zakoncz")
+    print("================================")
+    
+    opcja = input("Wybierz opcje: ")
+    
+    if opcja == '1':
+        tytul = input("Tytul: ")
+        autor = input("Autor: ")
+        biblioteka.append({
+            "tytul": tytul,
+            "autor": autor,
+            "status": "Dostepna"
+        })
+        print("Ksiazka dodana.")
+        
+    elif opcja == '2':
+        if not biblioteka:
+            print("Katalog jest pusty.")
+        else:
+            for i, ksiazka in enumerate(biblioteka, start=1):
+                print(f"{i}. {ksiazka['tytul']} - {ksiazka['autor']} ({ksiazka['status']})")
+                
+    elif opcja == '3':
+        try:
+            numer = int(input("Numer ksiazki do wypozyczenia: ")) - 1
+            if 0 <= numer < len(biblioteka):
+                if biblioteka[numer]['status'] == "Dostepna":
+                    biblioteka[numer]['status'] = "Wypozyczona"
+                    print(f"Wypozyczono: {biblioteka[numer]['tytul']}")
+                else:
+                    print("Blad: Ksiazka jest juz wypozyczona.")
+            else:
+                print("Blad: Nieprawidlowy numer ksiazki.")
+        except ValueError:
+            print("Blad: Podaj poprawny numer (liczbe).")
+            
+    elif opcja == '4':
+        try:
+            numer = int(input("Numer ksiazki do zwrotu: ")) - 1
+            if 0 <= numer < len(biblioteka):
+                if biblioteka[numer]['status'] == "Wypozyczona":
+                    biblioteka[numer]['status'] = "Dostepna"
+                    print(f"Zwrocono: {biblioteka[numer]['tytul']}")
+                else:
+                    print("Blad: Ksiazka nie jest wypozyczona, wiec nie mozesz jej zwrocic.")
+            else:
+                print("Blad: Nieprawidlowy numer ksiazki.")
+        except ValueError:
+            print("Blad: Podaj poprawny numer (liczbe).")
+            
+    elif opcja == '5':
+        try:
+            numer = int(input("Numer ksiazki do usuniecia: ")) - 1
+            if 0 <= numer < len(biblioteka):
+                usunieta = biblioteka.pop(numer)
+                print(f"Usunieto ksiazke: {usunieta['tytul']}")
+            else:
+                print("Blad: Nieprawidlowy numer ksiazki.")
+        except ValueError:
+            print("Blad: Podaj poprawny numer (liczbe).")
+            
+    elif opcja == '0':
+        print("Koniec programu.")
+        break
+        
+    else:
+        print("Nieznana opcja, sprobuj ponownie.")
