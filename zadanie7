@@ -2,11 +2,11 @@ kwota = int(input("Ile odkladasz tygodniowo? "))
 tygodnie = int(input("Przez ile tygodni? "))
 
 oszczednosci = 0
-i = 1  # Zaczynamy od pierwszego tygodnia
+i = 1  
 
 while i <= tygodnie:
     oszczednosci = oszczednosci + kwota
     print(f"Tydzien {i}: {oszczednosci} zl")
-    i = i + 1  # Przechodzimy do kolejnego tygodnia
+    i = i + 1  
 
 print(f"Laczne oszczednosci: {oszczednosci} zl")
