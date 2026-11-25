@@ -1,0 +1,18 @@
+zakupy = []
+ile = int(input("Ile produktow chcesz dodac? "))
+
+for i in range(ile):
+    produkt = input(f"Produkt {i+1}: ")
+    zakupy.append(produkt)
+
+print(f"Lista: {zakupy}")
+print(f"Liczba produktow: {len(zakupy)}")
+
+do_usuniecia = input("Produkt do usuniecia: ")
+
+if do_usuniecia in zakupy:
+    zakupy.remove(do_usuniecia)
+else:
+    print("Brak produktu na liscie.")
+
+print(f"Nowa lista: {zakupy}")
