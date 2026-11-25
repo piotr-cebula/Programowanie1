@@ -1,0 +1,15 @@
+haslo = "Python123"
+proby = 0
+
+while proby < 3:
+    podane = input("Podaj haslo: ")
+    if podane == haslo:
+        print("Logowanie udane!")
+        break
+    else:
+        proby += 1
+        pozostale = 3 - proby
+        if pozostale > 0:
+            print(f"Niepoprawne haslo. Pozostale proby: {pozostale}")
+        else:
+            print("Konto zablokowane")
