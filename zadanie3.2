@@ -1,0 +1,70 @@
+historia = []
+
+while True:
+    print("\n========== KALKULATOR ==========")
+    print("1. Dodawanie")
+    print("2. Odejmowanie")
+    print("3. Mnozenie")
+    print("4. Dzielenie")
+    print("5. Potegowanie")
+    print("6. Srednia z podanych liczb")
+    print("0. Zakoncz")
+    print("================================")
+    
+    opcja = input("Wybierz opcje: ")
+    
+    if opcja == '0':
+        print("Koniec programu.")
+        break
+        
+    elif opcja in ['1', '2', '3', '4', '5']:
+        try:
+            a = float(input("Pierwsza liczba: "))
+            b = float(input("Druga liczba: "))
+            
+            if opcja == '1':
+                wynik = a + b
+                dzialanie = f"{a} + {b} = {wynik}"
+            elif opcja == '2':
+                wynik = a - b
+                dzialanie = f"{a} - {b} = {wynik}"
+            elif opcja == '3':
+                wynik = a * b
+                dzialanie = f"{a} * {b} = {wynik}"
+            elif opcja == '4':
+                if b == 0:
+                    print("Blad: Nie mozna dzielic przez zero!")
+                    continue
+                wynik = a / b
+                dzialanie = f"{a} / {b} = {wynik}"
+            elif opcja == '5':
+                wynik = a ** b
+                dzialanie = f"{a} ^ {b} = {wynik}"
+                
+            print(f"Wynik: {dzialanie}")
+            historia.append(dzialanie)
+            
+        except ValueError:
+            print("Blad: Podano wartosc, ktora nie jest liczba!")
+            
+    elif opcja == '6':
+        try:
+            ile = int(input("Ile liczb? "))
+            if ile <= 0:
+                print("Liczba elementow musi byc wieksza od zera!")
+                continue
+                
+            suma = 0
+            for i in range(ile):
+                liczba = float(input(f"Liczba {i+1}: "))
+                suma += liczba
+                
+            srednia = suma / ile
+            print(f"Srednia: {srednia}")
+            historia.append(f"Srednia z {ile} liczb = {srednia}")
+            
+        except ValueError:
+            print("Blad: Podano wartosc, ktora nie jest calkowita liczba elementow lub poprawna liczba!")
+            
+    else:
+        print("Nieznana opcja, sprobuj ponownie.")
