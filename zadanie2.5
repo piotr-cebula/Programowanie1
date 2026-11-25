@@ -1,0 +1,20 @@
+temperatury = []
+
+for i in range(7):
+    temp = float(input(f"Dzien {i+1}: "))
+    temperatury.append(temp)
+
+srednia = sum(temperatury) / len(temperatury)
+najwyzsza = max(temperatury)
+najnizsza = min(temperatury)
+
+powyzej_sredniej = []
+for temp in temperatury:
+    if temp > srednia:
+        powyzej_sredniej.append(temp)
+
+print(f"Srednia: {srednia} C")
+print(f"Najwyzsza: {najwyzsza} C")
+print(f"Najnizsza: {najnizsza} C")
+print(f"Powyzej sredniej: {powyzej_sredniej}")
+print(f"Liczba dni: {len(powyzej_sredniej)}")
